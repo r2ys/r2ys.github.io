@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-14T21:49:07+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">r2ys</title><subtitle>软件开发</subtitle><entry><title type="html">我的编程之路</title><link href="http://localhost:4000/the-road-to-engineering/" rel="alternate" type="text/html" title="我的编程之路" /><published>2019-06-14T00:00:00+08:00</published><updated>2019-06-14T00:00:00+08:00</updated><id>http://localhost:4000/the-road-to-engineering</id><content type="html" xml:base="http://localhost:4000/the-road-to-engineering/">&lt;p&gt;C-&amp;gt;iOS-&amp;gt;javascript-&amp;gt;Java-&amp;gt;Go&lt;/p&gt;</content><author><name></name></author><summary type="html">C-&amp;gt;iOS-&amp;gt;javascript-&amp;gt;Java-&amp;gt;Go</summary></entry><entry><title type="html">How to install jykell on mac!</title><link href="http://localhost:4000/how-to-install-jykell-on-mac/" rel="alternate" type="text/html" title="How to install jykell on mac!" /><published>2019-01-08T18:46:41+08:00</published><updated>2019-01-08T18:46:41+08:00</updated><id>http://localhost:4000/how-to-install-jykell-on-mac</id><content type="html" xml:base="http://localhost:4000/how-to-install-jykell-on-mac/">&lt;p&gt;如何在mac上安装jykell&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://blog.r2ys.top/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.r2ys.top/" rel="alternate" type="text/html" /><updated>2019-06-28T13:08:26+08:00</updated><id>https://blog.r2ys.top/feed.xml</id><title type="html">r2ys</title><subtitle>软件开发</subtitle><entry><title type="html">install docker registry on centos</title><link href="https://blog.r2ys.top/install-docker-registry-on-centos/" rel="alternate" type="text/html" title="install docker registry on centos" /><published>2019-06-28T13:06:41+08:00</published><updated>2019-06-28T13:06:41+08:00</updated><id>https://blog.r2ys.top/install-docker-registry-on-centos</id><content type="html" xml:base="https://blog.r2ys.top/install-docker-registry-on-centos/">&lt;h2 id=&quot;centos搭建docker私有仓库&quot;&gt;centos搭建docker私有仓库&lt;/h2&gt;
+
+&lt;h4 id=&quot;安装docker&quot;&gt;安装docker&lt;/h4&gt;
+
+&lt;p&gt;略过&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 重启docker&lt;/span&gt;
+systemctl daemon-reload
+systemctl restart docker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;拉取仓库镜像&quot;&gt;拉取仓库镜像&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker pull registry 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;运行仓库&quot;&gt;运行仓库&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /registry:/var/lib/registry &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 5000:5000 &lt;span class=&quot;nt&quot;&gt;--restart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;always &lt;span class=&quot;nt&quot;&gt;--privileged&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; registry registry:latest 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;示例从官方仓库拉取hello-world&quot;&gt;示例:从官方仓库拉取hello-world&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker pull hello-world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;给hello-world镜像打个tag表示新的版本&quot;&gt;给hello-world镜像打个tag，表示新的版本&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker tag hello-world 127.0.0.1:5000/hello-world:latest 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;推送将新的hello-world镜像上传到私有仓库&quot;&gt;推送：将新的hello-world镜像上传到私有仓库&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker push 127.0.0.1:5000/hello-world:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;在私有仓库查看上传的镜像&quot;&gt;在私有仓库查看上传的镜像&lt;/h4&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /registry/docker/registry/v2/repositories
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;通过客户端查看镜像&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl http://127.0.0.1:5000/v2/_catalog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;输出:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;repositories&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hello-world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">centos搭建docker私有仓库</summary></entry><entry><title type="html">我的编程之路</title><link href="https://blog.r2ys.top/the-road-to-engineering/" rel="alternate" type="text/html" title="我的编程之路" /><published>2019-06-14T00:00:00+08:00</published><updated>2019-06-14T00:00:00+08:00</updated><id>https://blog.r2ys.top/the-road-to-engineering</id><content type="html" xml:base="https://blog.r2ys.top/the-road-to-engineering/">&lt;p&gt;C-&amp;gt;iOS-&amp;gt;javascript-&amp;gt;Java-&amp;gt;Go&lt;/p&gt;</content><author><name></name></author><summary type="html">C-&amp;gt;iOS-&amp;gt;javascript-&amp;gt;Java-&amp;gt;Go</summary></entry><entry><title type="html">How to install jykell on mac!</title><link href="https://blog.r2ys.top/how-to-install-jykell-on-mac/" rel="alternate" type="text/html" title="How to install jykell on mac!" /><published>2019-01-08T18:46:41+08:00</published><updated>2019-01-08T18:46:41+08:00</updated><id>https://blog.r2ys.top/how-to-install-jykell-on-mac</id><content type="html" xml:base="https://blog.r2ys.top/how-to-install-jykell-on-mac/">&lt;p&gt;如何在mac上安装jykell&lt;/p&gt;
 
 &lt;p&gt;1.安装rvm&lt;/p&gt;
 
@@ -69,7 +108,7 @@ jekyll serve --watch --baseurl '/blog'
 
 &lt;p&gt;&lt;img src=&quot;/assets/201812121137485b3b6458f4023.jpg&quot; alt=&quot;avatar&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">如何在mac上安装jykell</summary></entry><entry><title type="html">You’re up and running!</title><link href="http://localhost:4000/Hello-World/" rel="alternate" type="text/html" title="You're up and running!" /><published>2014-03-03T00:00:00+08:00</published><updated>2014-03-03T00:00:00+08:00</updated><id>http://localhost:4000/Hello-World</id><content type="html" xml:base="http://localhost:4000/Hello-World/">&lt;p&gt;Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).&lt;/p&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">如何在mac上安装jykell</summary></entry><entry><title type="html">You’re up and running!</title><link href="https://blog.r2ys.top/Hello-World/" rel="alternate" type="text/html" title="You're up and running!" /><published>2014-03-03T00:00:00+08:00</published><updated>2014-03-03T00:00:00+08:00</updated><id>https://blog.r2ys.top/Hello-World</id><content type="html" xml:base="https://blog.r2ys.top/Hello-World/">&lt;p&gt;Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/config.png&quot; alt=&quot;_config.yml&quot; /&gt;&lt;/p&gt;
 

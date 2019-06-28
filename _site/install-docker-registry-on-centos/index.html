@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<title>install docker registry on centos – r2ys – 软件开发</title>-->
+    <title>install docker registry on centos – r2ys</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="centos搭建docker私有仓库
+
+" />
+    <meta property="og:description" content="centos搭建docker私有仓库
+
+" />
+    
+    <meta name="author" content="r2ys" />
+
+    
+    <meta property="og:title" content="install docker registry on centos" />
+    <meta property="twitter:title" content="install docker registry on centos" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="r2ys - 软件开发" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://blog.r2ys.top/images/jekyll-logo.png" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">r2ys</a></h1>
+            <p class="site-description">软件开发</p>
+          </div>
+
+          <nav>
+            <a href="/">Blog</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>install docker registry on centos</h1>
+
+  <div class="entry">
+    <h2 id="centos搭建docker私有仓库">centos搭建docker私有仓库</h2>
+
+<h4 id="安装docker">安装docker</h4>
+
+<p>略过</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 重启docker</span>
+systemctl daemon-reload
+systemctl restart docker
+</code></pre></div></div>
+
+<h4 id="拉取仓库镜像">拉取仓库镜像</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull registry 
+</code></pre></div></div>
+<h4 id="运行仓库">运行仓库</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">-v</span> /registry:/var/lib/registry <span class="nt">-p</span> 5000:5000 <span class="nt">--restart</span><span class="o">=</span>always <span class="nt">--privileged</span><span class="o">=</span><span class="nb">true</span> <span class="nt">--name</span> registry registry:latest 
+</code></pre></div></div>
+
+<h4 id="示例从官方仓库拉取hello-world">示例:从官方仓库拉取hello-world</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull hello-world
+</code></pre></div></div>
+
+<h4 id="给hello-world镜像打个tag表示新的版本">给hello-world镜像打个tag，表示新的版本</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker tag hello-world 127.0.0.1:5000/hello-world:latest 
+</code></pre></div></div>
+
+<h4 id="推送将新的hello-world镜像上传到私有仓库">推送：将新的hello-world镜像上传到私有仓库</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker push 127.0.0.1:5000/hello-world:latest
+</code></pre></div></div>
+
+<h4 id="在私有仓库查看上传的镜像">在私有仓库查看上传的镜像</h4>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> /registry/docker/registry/v2/repositories
+</code></pre></div></div>
+
+<p>通过客户端查看镜像</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://127.0.0.1:5000/v2/_catalog
+</code></pre></div></div>
+
+<p>输出:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"repositories"</span><span class="p">:[</span><span class="s2">"hello-world"</span><span class="p">]}</span><span class="w">
+</span></code></pre></div></div>
+
+  </div>
+
+  <div class="date">
+    Written on June 28, 2019
+  </div>
+
+  
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:r2ys@outlook.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/r2ys"><i class="svg-icon github"></i></a>
+
+
+
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
