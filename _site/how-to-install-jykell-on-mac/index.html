@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to install jykell on mac! – r2ys – 软件开发</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="如何在mac上安装jykell
+
+" />
+    <meta property="og:description" content="如何在mac上安装jykell
+
+" />
+    
+    <meta name="author" content="r2ys" />
+
+    
+    <meta property="og:title" content="How to install jykell on mac!" />
+    <meta property="twitter:title" content="How to install jykell on mac!" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="r2ys - 软件开发" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://blog.r2ys.top/images/jekyll-logo.png" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">r2ys</a></h1>
+            <p class="site-description">软件开发</p>
+          </div>
+
+          <nav>
+            <a href="/">Blog</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>How to install jykell on mac!</h1>
+
+  <div class="entry">
+    <p>如何在mac上安装jykell</p>
+
+<p>1.安装rvm</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -L get.rvm.io | bash -s stable
+
+source ~/.rvm/scripts/rvm
+
+rvm -v
+</code></pre></div></div>
+
+<p>2.安装ruby</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install 2.6.0
+
+rvm list
+</code></pre></div></div>
+
+<p>3.安装jykell</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem source
+
+gem install jekyll
+
+jekyll -version
+</code></pre></div></div>
+
+<p>4.安装bundle</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundle
+
+运行bundle，安装Gemfile里的插件
+
+bundle install
+</code></pre></div></div>
+
+<p>5.初始化web项目</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new r2ys-site
+
+cd r2ys-site/
+</code></pre></div></div>
+
+<p>6.本地localhost:4000测试</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
+jekyll serve --watch --baseurl '/blog'
+</code></pre></div></div>
+
+<p>7.内容生成</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+</code></pre></div></div>
+
+<p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">prinln</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+<span class="n">def</span> <span class="nf">print_hi</span><span class="o">(</span><span class="n">name</span><span class="o">)</span>
+  <span class="n">puts</span> <span class="s">"Hi, #{name}"</span>
+<span class="n">end</span>
+<span class="nf">print_hi</span><span class="o">(</span><span class="err">'</span><span class="nc">Tom</span><span class="err">'</span><span class="o">)</span>
+<span class="err">#</span><span class="o">=&gt;</span> <span class="n">prints</span> <span class="err">'</span><span class="nc">Hi</span><span class="o">,</span> <span class="nc">Tom</span><span class="err">'</span> <span class="n">to</span> <span class="no">STDOUT</span><span class="o">.</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-oc" data-lang="oc">NSString *str = @"suck";</code></pre></figure>
+
+<p><img src="/assets/201812121137485b3b6458f4023.jpg" alt="avatar" /></p>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+
+  </div>
+
+  <div class="date">
+    Written on January  8, 2019
+  </div>
+
+  
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:r2ys@outlook.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/r2ys"><i class="svg-icon github"></i></a>
+
+
+
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
