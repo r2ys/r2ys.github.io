@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://blog.r2ys.top/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.r2ys.top/" rel="alternate" type="text/html" /><updated>2019-07-10T10:56:01+08:00</updated><id>https://blog.r2ys.top/feed.xml</id><title type="html">r2ys</title><subtitle>软件开发</subtitle><entry><title type="html">aes encrypt in mysql</title><link href="https://blog.r2ys.top/aes-encrypt-in-mysql/" rel="alternate" type="text/html" title="aes encrypt in mysql" /><published>2019-07-10T10:53:00+08:00</published><updated>2019-07-10T10:53:00+08:00</updated><id>https://blog.r2ys.top/aes-encrypt-in-mysql</id><content type="html" xml:base="https://blog.r2ys.top/aes-encrypt-in-mysql/">&lt;h2 id=&quot;在mysql中对字符串aes加密和解密&quot;&gt;在mysql中对字符串aes加密和解密&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://blog.r2ys.top/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.r2ys.top/" rel="alternate" type="text/html" /><updated>2019-07-10T16:18:30+08:00</updated><id>https://blog.r2ys.top/feed.xml</id><title type="html">r2ys</title><subtitle>软件开发</subtitle><entry><title type="html">mysql only full group by</title><link href="https://blog.r2ys.top/mysql-only-full-group-by/" rel="alternate" type="text/html" title="mysql only full group by" /><published>2019-07-10T16:01:00+08:00</published><updated>2019-07-10T16:01:00+08:00</updated><id>https://blog.r2ys.top/mysql-only-full-group-by</id><content type="html" xml:base="https://blog.r2ys.top/mysql-only-full-group-by/">&lt;h2 id=&quot;mysql-sql-group-by是如何选择哪一条数据留下的&quot;&gt;MySQL SQL GROUP BY是如何选择哪一条数据留下的&lt;/h2&gt;
+
+&lt;h4 id=&quot;示例&quot;&gt;示例&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;-- 建表
+CREATE TABLE `src2` (
+  `id` int(11) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- 查询
+SELECT id, name FROM src2;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;查询到的结果
+id  name
+1   alpha
+1   bravo
+2   charlie
+2   dolphin&lt;/p&gt;
+
+&lt;h4 id=&quot;查看当前mysql版本并且看是否开启了only-full-group-by&quot;&gt;查看当前mysql版本，并且看是否开启了only full group by&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;SELECT version(), @@sql_mode;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;5.7.20  STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION&lt;/p&gt;
+
+&lt;h4 id=&quot;根据id使用group-by查询idname&quot;&gt;根据id使用group by查询id,name&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;SELECT id, NAME FROM src2 GROUP BY id;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如无异常会查询到两条数据，但是同样为id1的两条数据是如何选择留哪一条呢
+1 alpha
+2 charlie&lt;/p&gt;
+
+&lt;h5 id=&quot;稍后再看先解决这个问题&quot;&gt;稍后再看，先解决这个问题&lt;/h5&gt;
+
+&lt;h4 id=&quot;关闭only-full-group-by&quot;&gt;关闭only full group by&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;-- 去除
+SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+-- 再次查询
+SELECT version(), @@sql_mode;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;如何恢复&quot;&gt;如何恢复？&lt;/h4&gt;
+&lt;p&gt;5.7之前的mysql其实是处于未定义规则状态，官方文档不承诺一定会返回哪条数据。而到了MySQL5.7，仍然是未定义状态，并且默认直接不允许未定义状态的grouping查询，会报错：&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;Expression #&lt;/span&gt;2 of SELECT list is not &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;GROUP BY clause and contains nonaggregated column &lt;span class=&quot;s1&quot;&gt;'learn.src2.name'&lt;/span&gt; which is not functionally dependent on columns &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;GROUP BY clause&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; this is incompatible with &lt;span class=&quot;nv&quot;&gt;sql_mode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;only_full_group_by
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;-- 重新开启only full group by
+SET sql_mode=(SELECT CONCAT(@@sql_mode, ',ONLY_FULL_GROUP_BY'));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;那么查询的重复id的数据应该返回哪一条呢&quot;&gt;那么查询的重复id的数据应该返回哪一条呢&lt;/h4&gt;
+
+&lt;p&gt;要看查询具体使用的b-tree索引中第一个命中的数据。&lt;/p&gt;
+
+&lt;h4 id=&quot;如何优化或者改变查询方式&quot;&gt;如何优化或者改变查询方式&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mysql&quot;&gt;-- 加入max条件或者其它
+SELECT * FROM src2 WHERE NAME IN (SELECT max(NAME) FROM src2 GROUP BY id) ORDER BY id ASC
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参考mysql文档：
+&lt;a href=&quot;https://dev.mysql.com/doc/refman/8.0/en/group-by-handling.html&quot;&gt;group by handling&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">MySQL SQL GROUP BY是如何选择哪一条数据留下的</summary></entry><entry><title type="html">aes encrypt in mysql</title><link href="https://blog.r2ys.top/aes-encrypt-in-mysql/" rel="alternate" type="text/html" title="aes encrypt in mysql" /><published>2019-07-10T10:53:00+08:00</published><updated>2019-07-10T10:53:00+08:00</updated><id>https://blog.r2ys.top/aes-encrypt-in-mysql</id><content type="html" xml:base="https://blog.r2ys.top/aes-encrypt-in-mysql/">&lt;h2 id=&quot;在mysql中对字符串aes加密和解密&quot;&gt;在mysql中对字符串aes加密和解密&lt;/h2&gt;
 
 &lt;h4 id=&quot;直接上函数&quot;&gt;直接上函数&lt;/h4&gt;
 
