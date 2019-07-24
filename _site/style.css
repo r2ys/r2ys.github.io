@@ -65,7 +65,7 @@ html {
 
 body {
   background: #fff;
-  font: 18px/1.4 Helvetica, Arial, sans-serif;
+  font: 12px/1.4 Helvetica, Arial, sans-serif;
   color: #333;
 }
 
@@ -80,33 +80,33 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
   font-weight: bold;
-  line-height: 1.7;
+  line-height: 1;
   margin: 1em 0 15px;
   padding: 0;
 }
 @media screen and (max-width: 640px) {
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1.4;
+    line-height: 1;
   }
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 23px;
 }
 h1 a {
   color: inherit;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 17px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 13px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 11px;
   color: #666;
 }
 
@@ -236,14 +236,14 @@ img {
   cursor: pointer;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 21px;
   letter-spacing: 1px;
 }
 
 .site-description {
-  margin: -5px 0 0 0;
+  margin: 8px 0 0 0;
   color: #666;
-  font-size: 16px;
+  font-size: 11px;
 }
 @media screen and (max-width: 640px) {
   .site-description {
@@ -302,7 +302,7 @@ nav a {
 }
 .post .read-more {
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .wrapper-footer {
@@ -330,6 +330,7 @@ footer {
 
 code {
   font-family: 'Bitstream Vera Sans Mono','Courier', monospace;
+  font-size: 12px;
 }
 
 .highlight .c {
