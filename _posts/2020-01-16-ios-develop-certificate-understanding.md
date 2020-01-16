@@ -58,4 +58,4 @@ Certificate Signing Request, 证书签名请求，用户生成公私钥，私钥
 
 
 #### iOS证书申请、到发布、再到用户安装过程中的流程
-![](images/apple_auth_process.png)
+![]({{ site.baseurl }}/images/apple_auth_process.png)
