@@ -1,37 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="724f8ec1-bf06-463f-8fd5-c5abaf42e9f3" name="Default" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
+    <list default="true" id="724f8ec1-bf06-463f-8fd5-c5abaf42e9f3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/abbd0bc9214955412f6a93a5f199a3baffc4a99c/_highlights.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/abbd0bc9214955412f6a93a5f199a3baffc4a99c/_reset.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/abbd0bc9214955412f6a93a5f199a3baffc4a99c/_svg-icons.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/abbd0bc9214955412f6a93a5f199a3baffc4a99c/_variables.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/CNAME" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/analytics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/disqus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/meta.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/svg-icons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2014-3-3-Hello-World.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-08-how-to-install-jykell-on-mac.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-14-the-road-to-engineering.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-28-install-docker-registry-on-centos.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-10-aes-encrypt-in-mysql.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-10-mysql-only-full-group-by.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-24-how-to-prove-pi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-30-find-java-path.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-30-how-to-install-flutter-on-mac.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-08-09-abstract-queued-synchronizer.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-10-10-use-iterm2-and-oh-my-zsh-to-replace-terminal.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-10-21-how-to-use-scp-and-tar.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-10-28-sentences-each-day.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-10-28-shortcuts-for-nginx.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-14-how-to-auto-publish-post.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-14-how-to-post-by-shell.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-14-write-work-summary.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-14-如何-使用-jekyll.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-byzantine.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-charactoristics-on-hyperledger-fabric.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-database-design.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-delete-dirty-lines-in-mysql.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-derby-and-mysql.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-design-a-flow-based-develop-and-invoke-system.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-difference-from-array-and-arraylist.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-distributed-system-learn-key-point.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-how-to-descripe-in-resume.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-learn-ast.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-learn-hibernate-mybatis-and-orm.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-learn-shell-from-start.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-linux-close-selinux.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-maven-project-directory-standard.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-operate-linux-firewall.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-parse-request-url.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-15-query-linux-tcp-exceptional-tcp-connections.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-01-16-ios-develop-certificate-understanding.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/_highlights.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/_reset.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/_svg-icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/Hello-World/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/about/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/abstract-queued-synchronizer/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/aes-encrypt-in-mysql/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/byzantine/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/charactoristics-on-hyperledger-fabric/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/database-design/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/delete-dirty-lines-in-mysql/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/derby-and-mysql/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/design-a-flow-based-develop-and-invoke-system/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/difference-from-array-and-arraylist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/distributed-system-learn-key-point/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/find-java-path/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/how-to-auto-publish-post/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/how-to-descripe-in-resume/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/how-to-install-flutter-on-mac/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/how-to-install-jykell-on-mac/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/how-to-post-by-shell/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/how-to-prove-pi/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/how-to-use-scp-and-tar/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/404.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/apple_auth_process.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/b06e6128d5fb986c15b0e8555ec638ab.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/config.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/first-post.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/jekyll-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/jekyll-now-theme-screenshot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/maven_project_directory_standard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/requesturl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/step1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/install-docker-registry-on-centos/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/ios-develop-certificate-understanding/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/learn-ast/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/learn-hibernate-mybatis-and-orm/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/learn-shell-from-start/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/linux-close-selinux/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/maven-project-directory-standard/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/mysql-only-full-group-by/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/operate-linux-firewall/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/parse-request-url/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/query-linux-tcp-exceptional-tcp-connections/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/sentences-each-day/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/shortcuts-for-nginx/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/the-road-to-engineering/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/use-iterm2-and-oh-my-zsh-to-replace-terminal/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/write-work-summary/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/如何-使用-jekyll/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/404.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/apple_auth_process.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/b06e6128d5fb986c15b0e8555ec638ab.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/config.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/first-post.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/jekyll-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/jekyll-now-theme-screenshot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/maven_project_directory_standard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/requesturl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/step1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.scss" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="analytics.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_includes/analytics.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="disqus.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/disqus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -43,6 +143,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -75,6 +180,7 @@
     <option name="width" value="1291" />
     <option name="height" value="804" />
   </component>
+  <component name="ProjectId" id="1petvMMDNERT9ZCiiwmCWJRtJUf" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -172,28 +278,22 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
-    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_posts" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -203,83 +303,38 @@
       <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
@@ -291,6 +346,9 @@
       <option name="presentableId" value="Default" />
       <updated>1560517944320</updated>
       <workItem from="1560517951915" duration="2233000" />
+      <workItem from="1615555616535" duration="2439000" />
+      <workItem from="1617197842299" duration="517000" />
+      <workItem from="1623217958630" duration="76000" />
     </task>
     <task id="LOCAL-00001" summary="modified logo.">
       <created>1560519280222</created>
@@ -361,20 +419,24 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modified logo." />
     <MESSAGE value="compressed logo size." />
     <MESSAGE value="modified index title." />
     <option name="LAST_COMMIT_MESSAGE" value="modified index title." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_site/404.html">
